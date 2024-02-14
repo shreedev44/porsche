@@ -1,0 +1,557 @@
+    /* Fonts */
+
+
+@font-face {
+    font-family: porsche;
+    src: url(fonts/Porsche\ Regular.ttf);
+}
+@font-face {
+    font-family: "Bio Sans W04 Regular";
+    src: url("https://db.onlinewebfonts.com/t/2113f701d3f2c47b990581da409548ae.eot");
+    src: url("https://db.onlinewebfonts.com/t/2113f701d3f2c47b990581da409548ae.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/2113f701d3f2c47b990581da409548ae.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/2113f701d3f2c47b990581da409548ae.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/2113f701d3f2c47b990581da409548ae.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/2113f701d3f2c47b990581da409548ae.svg#Bio Sans W04 Regular")format("svg");
+}
+
+    /* general */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Bio Sans W04 Regular;
+}
+
+    /* header */
+
+header{
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    height: 20vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5%;
+    background: linear-gradient(rgb(33, 33, 33) 10%, transparent 90%);
+}
+
+header div span{
+    font-family: porsche;
+    color: white;
+    margin-top: 1.2em;
+    font-size: 22px;
+    cursor: default;
+}
+
+header div img{
+    width: 30px;
+    position:absolute;
+    z-index: 5;
+    top: 18px;
+    display: none;
+}
+
+header button{
+    margin-top: 2em;
+    height: 25px;
+    vertical-align: middle;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    transition: 0.4s;
+}
+header button:hover{
+    background-color: rgba(116, 116, 116, 0.368);
+    backdrop-filter: blur(1.5px);
+}
+
+.menu-button
+{
+    display: flex;
+    width: 5em;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3px;
+    font-weight: lighter;
+    padding: 0.5em 1em;
+}
+
+    /* video */
+
+
+.video-div{
+    overflow: hidden; 
+    height: 100vh; 
+    position: relative;
+
+}
+
+.video-bottom-div{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    height: 10em;
+    background: linear-gradient(to top, rgb(33, 33, 33) 10%, transparent 90%);
+}
+
+.pause-button{
+    position: absolute;
+    bottom: 30px;
+    right: 60px;
+    padding: 16px 17px;
+    border: solid;
+    border-color: white;
+    border-radius: 3px;
+    border-width: 2px;
+    background-color: transparent;
+    transition: 0.2s;
+}
+
+.pause-button:hover{
+    background-color: rgba(116, 116, 116, 0.368);
+    border-color: gray;
+    backdrop-filter: blur(1.5px);
+}
+
+.overfeel-div{
+    position: absolute; 
+    color: white;
+    z-index: 2;
+    width: 100%;
+    height: 20%;
+    left: 10%;
+    bottom: 20%;
+    
+}
+
+.overfeel{
+    font-size: 6rem;   
+}
+
+.discover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    border-width: 2px;
+    border-color: white;
+    background-color: transparent;
+    color: white;
+    padding: 0.8em 1.3em;
+    border-radius: 3px;
+    
+}
+
+.discover:hover{
+    background-color: rgba(116, 116, 116, 0.368);
+    border-color: gray;
+    backdrop-filter: blur(1.5px);
+}
+
+/* Home buttons */
+
+.card-grid{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    column-gap: 30px;
+    row-gap: 30px;
+    margin: 6% 0;
+    padding: 0 190px;
+    justify-content: center;
+}
+
+.card-div{
+    overflow: hidden;
+    border: none;
+    border-radius: 13px;
+    position: relative;
+    
+}
+
+.card-div:hover .card-image{
+    transform: scale(1.05);
+}
+
+.card-image{
+    object-fit: cover;
+    width: 100%;
+    transition: 0.4s;
+}
+
+.card-label-div{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    color: white;
+    font-size: 0.9rem;
+    background: linear-gradient(to top, rgb(33, 33, 33) 10%, transparent 90%);
+    
+}
+
+.card-label-button{
+    border: none;
+    background-color: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+}
+
+.card-label-button:hover{
+    background-color: rgba(116, 116, 116, 0.368);
+    backdrop-filter: blur(1.5px);
+}
+
+/* Models */
+
+.model-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+    row-gap: 30px;
+    padding: 0 15%;
+}
+
+.card-div{
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+}
+
+.card-div:hover .model-image{
+    transform: scale(1.05);
+}
+
+.model-image{
+    object-fit: cover;
+    width: 100%;
+    transition: 0.4s;
+}
+
+.model-name{
+    position: absolute;
+    width: 15%;
+    left: 5%;
+    top: 5%;
+    filter: invert(100%);
+}
+
+.model-label{
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+    padding: 5%;
+    padding-bottom: 0;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.model-price{
+    font-size: 1rem; 
+    font-weight: 100;
+}
+
+.model-button-grid{
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    padding: 5%;
+    padding-top: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to top, rgb(33, 33, 33) 10%, transparent 90%);
+    
+}
+
+.model-button1{
+    height: 100%;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+.model-button1:hover{
+    background-color: rgb(211, 211, 211);
+}
+.model-button2{
+    height: 100%;
+    background-color: transparent;
+    color: white;
+    border: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    transition: 0.4s;
+}
+.model-button2:hover{
+    background-color: rgba(116, 116, 116, 0.532);
+    backdrop-filter: blur(1.5px);
+}
+
+/* Find your porsche center */
+
+.porsche-center-whole-div{
+    padding: 10%;
+}
+
+.porsche-center-grid{
+    display: grid;
+    grid-template-columns: 45% 55%;
+    overflow: hidden;
+    border-radius: 12px;
+    max-height: 50vh;
+}
+
+.porsche-center-image{
+    object-fit: cover;
+}
+
+.porsche-center{
+    background-color: black;
+    padding: 10%;
+}
+
+.porsche-center-inner-grid{
+    height: 80%;
+    display: grid;
+    grid-template-rows: 30% 1fr 1fr;
+    row-gap: 10px;
+
+}
+
+.porsche-center-heading{
+    color: white;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.porsche-center-label{
+    color: white;
+    width: 100%;
+}
+
+.porsche-center-inner-grid button{
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 15px 17px;
+    transition: 0.4s;
+}
+.porsche-center-inner-grid button:hover{
+    background-color: rgb(211, 211, 211);
+}
+
+/* Online Shopping Highlights */
+
+.cards-wrapped{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 15%;
+  }
+  .shopping-card{
+    margin: 0 0.5em;
+    border: none;
+    transition: 0.4s;
+    overflow: hidden;
+  }
+  .shopping-card:hover{
+    background-color: rgb(232, 232, 232);
+  }
+  .shopping-img{
+    transition: 0.4s;
+  }
+  .shopping-card:hover .shopping-img{
+    transform: scale(1.1);
+  }
+  .shopping-btn{
+    background-color: transparent;
+    color: black;
+    transition: 0.4s;
+  }
+  .shopping-btn:hover{
+    background-color: rgb(215, 215, 215);
+  }
+
+
+  /* Footer */
+
+
+.country-region-flexbox
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 15px;
+    max-width: 300px;
+}
+.country-language
+{
+    color: white;
+}
+.country-change-text
+{
+    color: white;
+    cursor: pointer;
+}
+.country-change-text:hover
+{
+    color: red;
+}
+.country-flag
+{
+    transform: translateY(-14%);
+}
+
+.company-label{
+    cursor: pointer;
+}
+
+.company-label:hover{
+    color: red;
+}
+
+.copyright-link{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.copyright-link:hover{
+    color: red;
+}
+
+
+ /* Media queries */
+
+ @media(max-width:1300px)
+ {
+     .overfeel{
+         font-size: 6vw;
+     }
+     .model-grid{
+        grid-template-columns: 1fr;
+        padding: 0 10%;
+     }
+     .model-button-grid{
+        grid-template-columns: 20% 20%;
+        column-gap: 15px;
+        height: 10%;
+     }
+     .model-label{
+        bottom: 10%;
+        font-size: 100%;
+     }
+     .model-price{
+        font-size: 60%;
+    }
+ }
+
+ @media(max-width:1000px)
+ {
+    .card-grid{
+        grid-template-columns: 1fr;
+        padding: 0 10%;
+    }
+    .card-label-div{
+        height: 20%;
+    }
+    .porsche-center-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 50%;
+    }
+    .porsche-center{
+        grid-row: 2;
+        padding: 2%;
+    }
+    .porsche-center-image{
+        width: 100%;
+    }
+    .porsche-center-image-div{
+        grid-row: 1;
+    }
+    .porsche-center-grid{
+        max-height: 70vh;
+    }
+    
+ }
+ 
+ @media(max-width:800px)
+ {
+     .overfeel{
+         font-size: 3rem
+     }
+ }
+ 
+ 
+ @media(max-width:760px)
+ {
+     .pause-button{
+         padding: 8px 9px;
+     }
+     header div span{
+         display: none;
+     }
+     header div img{
+         display: block;
+     }
+     .menu-label{
+         display: none;
+     }
+     .menu-button{
+         padding: 0.5em;
+         width: 2em;
+     }
+     .discover{
+        width: 80%;
+     }
+
+     .model-grid{
+        grid-template-columns: 1fr;
+        padding: 0 7%;
+     }
+     .model-button-grid{
+        grid-template-columns: 1fr;
+        column-gap: 15px;
+        height: 20%;
+     }
+     .model-label{
+        bottom: 20%;
+        font-size: 100%;
+     }
+     .model-price{
+        font-size: 60%;
+    }
+    .shopping-card:not(:first-child){
+        display: none;
+      }
+
+ }
+ @media(max-width:480px)
+ {
+    .porsche-center-heading{
+        font-size: 1.2rem;
+    }
+    .porsche-center-label{
+        font-size: 0.8rem;
+    }
+    .porsche-center-inner-grid button{
+        width: 100%;
+        padding: 6px 0;
+    }
+ }
